@@ -1,5 +1,5 @@
 "use client";
-import { formatDate } from "@/app/blog/[slug]/page";
+import { formatDate } from "@/functions/func";
 import { User } from "@prisma/client";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
