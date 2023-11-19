@@ -1,6 +1,7 @@
 import { getData } from "@/components/CategoryList";
 import Comments from "@/components/Comments";
 import Menu from "@/components/Menu";
+import { formatDate } from "@/functions/func";
 import { User } from "@prisma/client";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -29,15 +30,7 @@ type Post = {
 //     description: post.desc,
 //   };
 // }
-export function formatDate(inputDate: string) {
-  const date = new Date(inputDate);
-  const options: Intl.DateTimeFormatOptions = {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  };
-  return date.toLocaleDateString("en-US", options);
-}
+
 const page = async ({ params: { slug } }: Params) => {
   const post: Post = await getData("posts/" + slug);
 

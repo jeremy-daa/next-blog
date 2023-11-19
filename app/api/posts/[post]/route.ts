@@ -2,7 +2,6 @@ import prisma from "@/utils/connect";
 import { NextResponse } from "next/server";
 // GET DINGLE POST
 export const GET = async (req: any, { params }: any) => {
-  const posts_page = 2;
   const { post } = params;
 
   try {
