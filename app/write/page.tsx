@@ -9,7 +9,7 @@ const page = async () => {
     redirect("/login");
   }
   return (
-    <div className="w-full">
+    <div className="w-full m-0">
       <Editor />
     </div>
   );
